@@ -4,14 +4,14 @@ import Filterbar from './Axios/Filterbar';
 import Mainlist from './Axios/Mainlist';
 // import Titlebar from './Axios/Titlebar';
 // import Form from './Axios/Form';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import React from "react";
 import { GiBeachBag } from "react-icons/gi";
 //import { HiDownload } from "react-icons/hi";
 import { BsFillPlusCircleFill } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import './TLP.css';
 
 export default function Tasklist() {
@@ -20,7 +20,7 @@ export default function Tasklist() {
         setShow(!show);
     };
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
         <>
@@ -77,24 +77,32 @@ function Addtask({ show, setShow }) {
 
     const loginClick = (e) => {
         alert("added")
+
+
+        // useEffect(() => {
+        // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
+        const url = "http://localhost:3000/dev/addtask";
+        const data = {
+            Subject: Subject,
+            txtcomments: txtcomments,
+            dtCreatedOn: dtCreatedOn,
+            txtAssignedto: txtAssignedto,
+            Status: Status,
+            LeadEmail: LeadEmail
+        };
+        const header = {}
+        axios.post(url, data, { headers: header })
+            .then((res) => {
+                console.log("Response==> " + JSON.stringify(res.data))
+                // localStorage.setItem("tokenvariable", res.data)
+                // navigate("/Salesdb");
+
+            })
+            .catch((err) => {
+                console.log("error==> " + JSON.stringify(err))
+            })
+        //  }, []);
     }
-
-    // useEffect(() => {
-    const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
-    const data = { Subject: Subject, txtcomments: txtcomments, dtCreatedOn: dtCreatedOn, txtAssignedto: txtAssignedto, Status: Status, LeadEmail: LeadEmail };
-    const header = {}
-    axios.post(url, data, header)
-        .then((res) => {
-            console.log("Response==> " + JSON.stringify(res.data))
-            // localStorage.setItem("tokenvariable", res.data)
-            // navigate("/Salesdb");
-
-        })
-        .catch((err) => {
-            console.log("Response==> " + JSON.stringify(err))
-        })
-    //  }, []);
-
     return show ? (
 
         <>
@@ -136,8 +144,7 @@ function Addtask({ show, setShow }) {
                                         <div className="r3_in" >
                                             {/* <input type="text" placeholder="" value={Subject} onChange={(e) => { setSubject(e.target.value) }} /> */}
                                             <label>Subject</label><br></br>
-
-                                            <input type="text" className="S" value={Subject} onChange={(e) => { setSubject(e.target.value) }} /> 
+                                            <input type="text" className="S" value={Subject} onChange={(e) => { setSubject(e.target.value) }} />
 
                                         </div>
                                         <div className="r3_in">

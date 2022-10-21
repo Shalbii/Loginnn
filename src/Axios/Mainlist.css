@@ -275,3 +275,7 @@ width: 180%;
 .Mainlist_list_row_top:hover{
   background-color:#9155FD;
 }
+
+.Mainlist_list_row_topSelected label{
+color: white;
+}
