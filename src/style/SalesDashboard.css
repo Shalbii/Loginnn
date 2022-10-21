@@ -1,0 +1,43 @@
+.salesdash{
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-between;
+
+}
+.salesdash_single{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.salesdash_single_title{
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+.salesdash_single_item{
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    min-width: 150px;
+    border-radius: 5px;
+}
+.salesdash_single_plus{
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;
+}
+.salesdash_single_item_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+}

@@ -1,0 +1,27 @@
+.leftbar {
+  min-height: 100vh;
+  padding-left: 5px;
+  background-color:#fafafa;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+}
+.leftbar_whitecircle,
+.leftbar_whitecircle1,
+.leftbar_whitecircle2,
+.leftbar_whitecircle3 {
+  min-width: 50px;
+  max-width: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+  background-color: white;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 30px;
+  color: #c3cad9;
+  font-size: 1.2rem;
+  align-items: top;
+}
