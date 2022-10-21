@@ -80,7 +80,7 @@ function Addtask({ show, setShow }) {
     }
 
     // useEffect(() => {
-    const url = "http://localhost:3000/dev/addtask";
+    const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
     const data = { Subject: Subject, txtcomments: txtcomments, dtCreatedOn: dtCreatedOn, txtAssignedto: txtAssignedto, Status: Status, LeadEmail: LeadEmail };
     const header = {}
     axios.post(url, data, header)
