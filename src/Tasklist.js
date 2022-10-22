@@ -32,7 +32,7 @@ export default function Tasklist() {
                         <div className='TasklistP_contentR'>
                             <div className='TasklistP_content_titlebar'>
 
-                                <div>
+                                <div className='border'>
 
                                     <div>< Addtask show={show} setShow={setShow} /></div>
                                     <div className="titlebar_top">
