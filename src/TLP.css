@@ -38,12 +38,13 @@ body{
     margin: 0;
 }
 .titlebar_top{
-    background-color: #fafafa;
+    background-color: #fafbfc;
     padding: 15px 30px;
     display: flex;
     width:140%;
     margin-left: 17%;
     justify-content: space-between;
+    box-shadow: 0px 0px 0px 1px lightgray;
    
 }
 .titlebar_bagSquare{
@@ -60,11 +61,21 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+  
 }
-.titlebar_top_col1 label,
+.titlebar_top_col1 label {
+  color: rgb(113, 123, 151);
+  font-family:Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
 .titlebar_top_col21 label{
     font-size: 14px;
     color: #7C8AA5;
+    font-family:Arial, Helvetica, sans-serif;
+   
 }
 .titlebar_top_col2{
     width: 25%;
@@ -78,7 +89,7 @@ body{
     align-items: center;
     padding: 7px 30px;
     border-radius: 20px;
-    border: 1px solid #7C8AA5;
+    border: 1px solid lightgray;
 }
 .titlebar_top_col22 {
     background-color: #8833FF;
@@ -87,6 +98,7 @@ body{
     align-items: center;
     padding: 7px 20px;
     border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .titlebar_top_col21 label,
 .titlebar_top_col22 label

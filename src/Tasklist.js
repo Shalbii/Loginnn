@@ -45,7 +45,7 @@ export default function Tasklist() {
 
                                         <div className="titlebar_top_col22">
                                             <BsFillPlusCircleFill className="titlebar_plusIcon" />
-                                            {/* <label>Add Lead</label> */}
+                                           
                                             <button onClick={handleClick} className="AT"> ADD TASK</button>
                                         </div>
                                     </div>
@@ -122,12 +122,7 @@ function Addtask({ show, setShow }) {
                                     <label>Email</label></div>
                                 <div className="r1_plus">
                                     <BsFillPlusCircleFill className="r1_plusIcon" />
-                                    {/* <label>Add Lead</label> */}
-                                    {/* <button className="button">  <b> SAVE</b></button> */}
-                                    {/* <button className="button" onClick={(e) => { SAVEclick(e); }} >  <b> SAVE</b></button> */}
-                                    {/* <button onClick={(e) => { SAVEclick(e); }}>SAVE
-                                     </button>  */}
-
+                                
                                     <button onClick={(e) => {
                                         loginClick(e);
                                     }} >SAVE</button>

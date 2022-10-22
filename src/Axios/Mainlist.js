@@ -36,7 +36,7 @@ export default function Mainlist() {
               <li>campaign</li>
               <li>Status</li>
               <li> dtCreatedOn </li>
-              <li>Leadname</li>
+              <li>LeadEmail</li>
              
           <li>owner</li>
             </ul>
@@ -81,7 +81,7 @@ function ListRow({itm, array, setArray}) {
           <label>{itm.Status}</label>
           <div>{day}-{month}-{year}</div>
           
-          <label>{itm.Leadname}</label>
+          <label>{itm.LeadEmail}</label>
         
           <label>{itm.owner}</label>
           <div className="Mainlist_icon">
