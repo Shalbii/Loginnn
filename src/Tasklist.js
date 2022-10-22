@@ -1,7 +1,7 @@
-import Topbar from './Axios/Topbar';
-import LeftBar from './Axios/LeftBar';
-import Filterbar from './Axios/Filterbar';
-import Mainlist from './Axios/Mainlist';
+import Topbar from './Components/Topbar';
+import LeftBar from './Components/LeftBar';
+import Filterbar from './Components/Filterbar';
+import Mainlist from './Components/Mainlist';
 // import Titlebar from './Axios/Titlebar';
 // import Form from './Axios/Form';
 // import { useNavigate } from "react-router-dom";
