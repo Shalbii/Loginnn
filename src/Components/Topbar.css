@@ -1,8 +1,4 @@
 
-
-body{
-    margin: 0;
-}
 .Topbar_header{
     background-color: #f3f3f4;
     width: 100%;
@@ -17,22 +13,22 @@ body{
 .Topbar_cancel_circle{
     background-color: white;
     border-radius: 20px;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: -25px;
 
     
 }
 .Topbar_icon_circle{
     background-color: white;
     border-radius: 20px;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,6 +86,10 @@ body{
     width: 170px;
     
 }
+.Topbar_Search_content,
+.Topbar_arrowIcon{
+    color: lightgrey; 
+}
 .Topbar_searchIcon {
     font-size: 25px;
     margin-right: 13px;
@@ -98,11 +98,11 @@ body{
 }
 .Topbar_col4{
     padding-top: 5px;
-    margin-left: 20px;
+    margin-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .Topbar_profileIcon{
-    color: #b8b8da ;
+    color: #b7c2d7 ;
 }
 .Topbar_BellIcon,
 .Topbar_cancelIcon{
@@ -220,4 +220,7 @@ body{
 .Clayton {
     margin-left: 66px;
     margin-top: -24px;
+}
+.Topbar_Company{
+margin-left: 10px;
 }
