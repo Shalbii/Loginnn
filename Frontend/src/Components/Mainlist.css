@@ -147,3 +147,7 @@
 .Mainlist_list_row_topSelected label{
 color: white;
 }
+
+.Mainlist_list_row_topSelected div{
+  color: white;
+}

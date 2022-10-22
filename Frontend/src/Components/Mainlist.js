@@ -67,7 +67,7 @@ function ListRow({itm, array, setArray}) {
     setArray(temp)
   }
   const d=new Date(itm.dtCreatedOn);
-  let day = d.getDay();
+  let day = d.getDate();
   let month = d.getMonth();
   let year = d.getFullYear();
   return (
