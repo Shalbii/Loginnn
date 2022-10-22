@@ -136,6 +136,7 @@ body{
     font-weight: 100;
 }
 
+
 .A1{
   display: flex;
   flex-direction: column;
@@ -146,10 +147,6 @@ body{
 
   
 }
-
-
-
-
 
 .AddtaskPage{
     
@@ -211,7 +208,9 @@ background-color: #9155FD;
 /* border-color: #FFFFFF; */
 border:none;
 border-radius: 18px;
-margin-left: 6px;
+margin-left: 5px;
+color: #FFFFFF;
+
 
 
 }
@@ -245,8 +244,8 @@ height: 4vh;
 border-radius:12px;
 padding-top: 1px;
 padding-left: 7px;
-padding-bottom: 5px;
-margin-right: -10%;
+padding-bottom: 8px;
+margin-right: -2%;
 margin-top: 20px;
 margin-left: -0.2%;
 }
