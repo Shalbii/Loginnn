@@ -15,6 +15,7 @@ import { useState } from "react";
 import './Tasklist.css';
 
 export default function Tasklist() {
+
     const [show, setShow] = useState(false);
     const handleClick = () => {
         setShow(!show);
@@ -45,7 +46,7 @@ export default function Tasklist() {
 
                                         <div className="titlebar_top_col22">
                                             <BsFillPlusCircleFill className="titlebar_plusIcon" />
-                                           
+
                                             <button onClick={handleClick} className="AT"> ADD TASK</button>
                                         </div>
                                     </div>
@@ -68,6 +69,13 @@ export default function Tasklist() {
 
 
 function Addtask({ show, setShow }) {
+    const [errorall, seterrorall] = useState("");
+    const [errors, seterrors] = useState("");
+    const [errorc, seterrorc] = useState("");
+    const [errord, seterrord] = useState("");
+    const [errorstatus, seterrorstatus] = useState("");
+    const [errora, seterrora] = useState("");
+    const [errorl, seterrorl] = useState("");
     const [Subject, setSubject] = useState("");
     const [txtcomments, settxtcomments] = useState("");
     const [dtCreatedOn, setdtCreatedOn] = useState("");
@@ -77,31 +85,57 @@ function Addtask({ show, setShow }) {
 
     const loginClick = (e) => {
         alert("added")
+        if (Subject == "" || txtcomments == "" || dtCreatedOn == "" || txtAssignedto == "" || Status == "" || LeadEmail == "") {
+            seterrorall(true)
+        }
+        else if (Subject != "" && txtcomments != "" && dtCreatedOn != "" && txtAssignedto != "" && Status != "" && LeadEmail != "") {
+            seterrors("")
+            seterrorc("")
+            seterrord("")
+            seterrorstatus("")
+            seterrora("")
+            seterrorl("")
 
+            // useEffect(() => {
+            // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
+            const url = "http://localhost:3000/dev/addtask";
+            const data = {
+                Subject: Subject,
+                txtcomments: txtcomments,
+                dtCreatedOn: dtCreatedOn,
+                txtAssignedto: txtAssignedto,
+                Status: Status,
+                LeadEmail: LeadEmail
+            };
+            const header = {}
+            axios.post(url, data, { headers: header })
+                .then((res) => {
+                    console.log("Response==> " + JSON.stringify(res.data))
+                    let result = res.data + " "
+                    if (result.includes("Subject is empty"))
+                        seterrors("Subject is empty")
 
-        // useEffect(() => {
-        // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
-        const url = "http://localhost:3000/dev/addtask";
-        const data = {
-            Subject: Subject,
-            txtcomments: txtcomments,
-            dtCreatedOn: dtCreatedOn,
-            txtAssignedto: txtAssignedto,
-            Status: Status,
-            LeadEmail: LeadEmail
-        };
-        const header = {}
-        axios.post(url, data, { headers: header })
-            .then((res) => {
-                console.log("Response==> " + JSON.stringify(res.data))
-                // localStorage.setItem("tokenvariable", res.data)
-                // navigate("/Salesdb");
+                        if (result.includes("txtcomments is empty"))
+                        seterrorc("txtcomments is empty")
 
-            })
-            .catch((err) => {
-                console.log("error==> " + JSON.stringify(err))
-            })
-        //  }, []);
+                        if (result.includes("dtCreatedOn is empty"))
+                        seterrord("dtCreatedOn is empty")
+
+                        if (result.includes("txtAssignedto is empty"))
+                        seterrora("txtAssignedto is empty")
+
+                        if (result.includes("LeadEmail is empty"))
+                        seterrorl("LeadEmail is empty")
+
+                        if (result.includes("Status is empty"))
+                        seterrorstatus("Status is empty")
+
+                })
+                .catch((err) => {
+                    console.log("error==> " + JSON.stringify(err))
+                })
+            //  }, []);
+        }
     }
     return show ? (
 
@@ -122,7 +156,7 @@ function Addtask({ show, setShow }) {
                                     <label>Email</label></div>
                                 <div className="r1_plus">
                                     <BsFillPlusCircleFill className="r1_plusIcon" />
-                                
+
                                     <button onClick={(e) => {
                                         loginClick(e);
                                     }} >SAVE</button>
@@ -137,39 +171,53 @@ function Addtask({ show, setShow }) {
                                     <div className="r3">
 
                                         <div className="r3_in" >
-                                            {/* <input type="text" placeholder="" value={Subject} onChange={(e) => { setSubject(e.target.value) }} /> */}
+
                                             <label>Subject</label><br></br>
                                             <input type="text" className="S" value={Subject} onChange={(e) => { setSubject(e.target.value) }} />
 
+                                            <label className="errors">{errors}</label>
+                                            {errorall && Subject == "" ? <label className="errors">Subject is empty</label> : ""}
                                         </div>
                                         <div className="r3_in">
-                                            {/* <input type="text" placeholder="" value={txtcomments} onChange={(e) => { settxtcomments(e.target.value) }} /> */}
+                                            
                                             <label>Comments</label><br></br>
                                             <input type="text" className="S" value={txtcomments} onChange={(e) => { settxtcomments(e.target.value) }} />
+
+                                            <label className="errorc">{errorc}</label>
+                                            {errorall && txtcomments == "" ? <label className="errorc">txtcomments is empty</label> : ""}
                                         </div>
                                         <div className="r3_in">
-                                            {/* <input type="text" placeholder="" value={dtCreatedOn} onChange={(e) => { setdtCreatedOn(e.target.value) }} /> */}
+                                            
                                             <label>created on</label><br></br>
                                             <input type="text" className="S" value={dtCreatedOn} onChange={(e) => { setdtCreatedOn(e.target.value) }} />
+                                        
+                                            <label className="errord">{errord}</label>
+                                            {errorall && dtCreatedOn == "" ? <label className="errord">dtCreatedOn is empty</label> : ""}
                                         </div>
                                     </div>
 
 
                                     <div className="r4">
                                         <div className="r4_in">
-                                            {/* <input type="text" placeholder="" value={txtAssignedto} onChange={(e) => { settxtAssignedto(e.target.value) }} /> */}
+                              
                                             <label>Assigned to</label><br></br>
                                             <input type="text" className="S" value={txtAssignedto} onChange={(e) => { settxtAssignedto(e.target.value) }} />
+                                            <label className="errora">{errora}</label>
+                                            {errorall && txtAssignedto == "" ? <label className="errora">txtAssignedto is empty</label> : ""}
                                         </div>
                                         <div className="r4_in">
-                                            {/* <input type="text" placeholder="" value={LeadEmail} onChange={(e) => { setLeadEmail(e.target.value) }} /> */}
+                                           
                                             <label>Lead email id</label><br></br>
                                             <input type="text" className="S" value={LeadEmail} onChange={(e) => { setLeadEmail(e.target.value) }} />
+                                            <label className="errorl">{errorl}</label>
+                                            {errorall && LeadEmail == "" ? <label className="errorl">LeadEmail is empty</label> : ""}
                                         </div>
                                         <div className="r4_in">
-                                            {/* <input type="text" placeholder="" value={Status} onChange={(e) => { setStatus(e.target.value) }} /> */}
+                                           
                                             <label>Status</label><br></br>
                                             <input type="text" className="S" value={Status} onChange={(e) => { setStatus(e.target.value) }} />
+                                            <label className="errorstatus">{errorstatus}</label>
+                                            {errorall && Status == "" ? <label className="errorstatus">Status is empty</label> : ""}
                                         </div>
                                     </div>
                                 </div>
