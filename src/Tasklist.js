@@ -12,7 +12,7 @@ import { GiBeachBag } from "react-icons/gi";
 //import { HiDownload } from "react-icons/hi";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { useState } from "react";
-import './TLP.css';
+import './Tasklist.css';
 
 export default function Tasklist() {
     const [show, setShow] = useState(false);
