@@ -1,26 +1,28 @@
+
+
 .leftbar {
-  min-height: 100vh;
-  padding-left: 5px;
-  background-color:#fafafa;
+  height: 140vh;
+  background-color: #f3f3f4;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 60px;
+  align-items: center;
+  width: 80px;
+  
+
 }
 .leftbar_whitecircle,
 .leftbar_whitecircle1,
 .leftbar_whitecircle2,
 .leftbar_whitecircle3 {
-  min-width: 50px;
-  max-width: 50px;
+  width: 35px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   justify-content: center;
   background-color: white;
-  min-height: 50px;
-  max-height: 50px;
-  border-radius: 30px;
+  height: 35px;
+  border-radius: 60px;
   color: #c3cad9;
   font-size: 1.2rem;
   align-items: top;

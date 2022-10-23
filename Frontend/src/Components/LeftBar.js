@@ -1,10 +1,10 @@
+
 import React from "react";
-import "./LeftBar.css";
+import "./LeftBar.css"
 import { FaRegCompass } from 'react-icons/fa';
 import {
   
   BsMessenger,
-  BsFillChatDotsFill,
 
 } from "react-icons/bs";
 import {
@@ -15,7 +15,6 @@ export default function LeftBar() {
     <>
      
       <div className="leftbar">
-        <div className="leftbar_whitecircle"><BsFillChatDotsFill /></div>
         <div className="leftbar_whitecircle1">
         <FaRegCompass />
       </div>
