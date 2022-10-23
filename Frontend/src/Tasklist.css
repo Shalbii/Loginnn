@@ -18,9 +18,9 @@
 
 .TasklistP_content_titlebar {
 
-    margin-top: 5%; 
+    /* margin-top: 5%;  */
     /* margin-bottom: 30%; */
-    margin-left: 18%;
+    /* margin-left: 18%; */
 
 
 }
@@ -49,10 +49,11 @@ body{
     background-color: #fafbfc;
     padding: 15px 30px;
     display: flex;
-    width:140%;
-    margin-left: 17%;
+    width:173%;
+    margin-left: 21%;
     justify-content: space-between;
     box-shadow: 0px 0px 0px 1px lightgray;
+    margin-top: 10%;
    
 }
 .titlebar_bagSquare{
@@ -141,12 +142,16 @@ body{
   display: flex;
   flex-direction: column;
  position: absolute;
- width:140%;
+ /* width:140%; */
+ width: 100vw;
   justify-content: center;
   margin-bottom: 20%;
+background-color: rgb(255 255 255 / 71%);
+ 
+height: 140%;
 
-  
 }
+
 
 .AddtaskPage{
     
@@ -155,8 +160,8 @@ body{
   justify-content: center;
   align-items: center;
   width: 70vh;
-  margin-left: 10%;
-  margin-top: 10%;
+  margin-left: 19%;
+  margin-top: -22%;
 }
 
 .r1_details{
@@ -406,3 +411,4 @@ margin-left: 10px;
   display: flex;
   position: absolute;
 }
+
