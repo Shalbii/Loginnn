@@ -10,6 +10,14 @@ var con = mysql.createConnection({
   database: "crm"
 });
 
+
+// var con = mysql.createConnection({
+//   host: "database-1.cptxxicj99bg.us-east-1.rds.amazonaws.com",
+//   user: "admin",
+//   password: "Password",
+//   database: "crm"
+// });
+
 con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
@@ -622,7 +630,7 @@ module.exports.addtask = async (event) => {
   let txtAssignedto = request.txtAssignedto;
   let Status = request.Status;
   let LeadEmail = request.LeadEmail;
-  let sql = "select LeadEmail from tblactivity where LeadEmail='" + LeadEmail + "';"
+  // let sql = "select LeadEmail from tblactivity where LeadEmail='" + LeadEmail + "';"
   let sql1 = "insert into tblactivity (Subject,txtComments,dtCreatedOn,txtAssignedto,LeadEmail,Status) values ('" + Subject + "', '" + txtcomments + "','" + dtCreatedOn + "','" + txtAssignedto + "','" + LeadEmail + "','" + Status + "');"
   let result = await new Promise((resolve, reject) => {
 
@@ -649,10 +657,11 @@ module.exports.addtask = async (event) => {
     if (LeadEmail === "") {
       resolve("LeadEmail is empty")
     }
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Result = " + JSON.stringify(result))
-      if (result == "") {
+    // con.query(sql, function (err, result) {
+    //   if (err) throw err;
+    //   console.log("Result = " + JSON.stringify(result))
+    //   if (result == "") {
+      
         con.query(sql1, function (err, result) {
           if (err) throw err;
           // console.log("Result = " + JSON.stringify(result))
@@ -660,15 +669,15 @@ module.exports.addtask = async (event) => {
           console.log("New task  details inserted")
           return
         });      }
-      else {
-        resolve("already email id exist")
-      }
-    });
+      // else {
+      //   resolve("already email id exist")
+      // }
+    );
+    return result;
+  };
 
-  });
 
-  return result;
-};
+
 
 
 module.exports.insertsingletask = async (event) => {
