@@ -49,8 +49,8 @@ body{
     background-color: #fafbfc;
     padding: 15px 30px;
     display: flex;
-    width:895px;
-    margin-left: 18.2%;
+    width:1102px;
+    margin-left: 21.2%;
     justify-content: space-between;
     box-shadow: 0px 0px 0px 1px #d3d3d361;
     margin-top: 10%;
@@ -143,12 +143,12 @@ body{
   flex-direction: column;
  position: absolute;
  /* width:140%; */
- width: 100vw;
+ width: 88vw;
   justify-content: center;
   margin-bottom: 20%;
 background-color: rgb(255 255 255 / 71%);
  
-height: 140%;
+height: 115%;
 
 }
 
@@ -178,7 +178,7 @@ padding-right: 90px;
 }
 
 .addtaskbold label{
-  font-size: 26px; 
+  font-size: 29px; 
   padding-right: 139px;
   font-family:Arial, Helvetica, sans-serif;
   color: rgb(113, 123, 151);

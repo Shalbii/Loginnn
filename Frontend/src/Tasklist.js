@@ -140,6 +140,7 @@ function Addtask({ show, setShow }) {
     return show ? (
 
         <>
+      
             <div className=" A1">
                 <div className="AddtaskPage">
                     <div className="full">
@@ -226,6 +227,7 @@ function Addtask({ show, setShow }) {
                     </div>
                 </div>
             </div>
+            
         </>
     ) : (
         <></>

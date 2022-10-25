@@ -152,3 +152,52 @@ color: white;
   color: white;
 }
 
+.itmtasktitle{
+  width:80px;
+  
+ }
+
+ .Header_Main1{
+  width:60px;
+  margin-left:15px;
+}
+
+.itmStatus{
+  width:60px;
+  margin-left:-15px;
+}
+
+.Header_Main2{
+  width: 96px;
+  margin-left: 84px;
+  padding-left: 4%;
+}
+
+
+.Header_Main3{
+  width:61px;
+  margin-left:46px;
+  padding-left: 1%;
+}
+
+.Header_Main4{
+  width:103px;
+  margin-left:61px;
+  padding-left: 6%;
+}
+
+.itmLeadEmail{
+  width:160px;
+  margin-left:15px;
+}
+
+.Header_Main5{
+  width:103px;
+  margin-left:61px;
+  padding-left: 6%;
+}
+
+.itmowner{
+  width:160px;
+  margin-left:15px;
+}

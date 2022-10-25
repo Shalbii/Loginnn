@@ -32,12 +32,15 @@ export default function Mainlist() {
         <div className="Mainlist_header">
           <div className="Mainlist_row1">
             <ul>
-          <li>tasklist</li>
+            <div className="Header_Main1"><li>tasklist</li></div>
               {/* <li>campaign</li> */}
-             <li>Status</li>
-             <li> dtCreatedOn </li>
-               <li>LeadEmail</li>
-          <li>owner</li>
+              <div className="Header_Main2"><li>Status</li></div>
+             {/* <li> dtCreatedOn </li> */}
+             <div className="Header_Main3"><li>dtCreatedOn</li></div>
+               {/* <li>LeadEmail</li> */}
+               <div className="Header_Main4"><li>LeadEmail</li></div>
+          {/* <li>owner</li> */}
+          <div className="Header_Main5"><li>owner</li></div>
             </ul>
           </div>
         </div>
@@ -75,14 +78,19 @@ function ListRow({ itm, array, setArray }) {
         <input className="Cb" type="checkbox" onClick={e => handleClick(e, itm)} />
         <label for="checkbox"></label>
         <div className="Mainlist_list_row">
-          <label>{itm.tasktitle}</label>
+          {/* <label>{itm.tasktitle}</label> */}
+          <div className="itmtasktitle">{itm.tasktitle}</div>
           {/* <label>{itm.campaign}</label> */}
-          <label>{itm.Status}</label>
-          <div>{day}-{month}-{year}</div>
+          {/* <label>{itm.Status}</label> */}
+          <div className="itmStatus">{itm.Status}</div>
+          {/* <div>{day}-{month}-{year}</div> */}
+          <div className="itmdate">{year}-{month}-{day}</div>
 
-          <label>{itm.LeadEmail}</label>
+          {/* <label>{itm.LeadEmail}</label> */}
+          <div className="itmLeadEmail">{itm.LeadEmail}</div>
 
-          <label>{itm.owner}</label>
+          {/* <label>{itm.owner}</label> */}
+          <div className="itmowner">{itm.owner}</div>
           <div className="Mainlist_icon">
             <AiOutlineArrowRight />
           </div>
