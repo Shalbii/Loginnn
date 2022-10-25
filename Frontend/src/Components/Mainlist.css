@@ -62,7 +62,7 @@
   margin-left: 10px;
   margin-right: 10px;
   height: 20%;
-  box-shadow: 0px 0px 0px 1px lightgray;
+  box-shadow: 0px 0px 0px 1px #d3d3d361;
 
 }
 .Mainlist_list {
@@ -151,3 +151,4 @@ color: white;
 .Mainlist_list_row_topSelected div{
   color: white;
 }
+

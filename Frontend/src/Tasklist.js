@@ -115,19 +115,19 @@ function Addtask({ show, setShow }) {
                     if (result.includes("Subject is empty"))
                         seterrors("Subject is empty")
 
-                        if (result.includes("txtcomments is empty"))
+                    if (result.includes("txtcomments is empty"))
                         seterrorc("txtcomments is empty")
 
-                        if (result.includes("dtCreatedOn is empty"))
+                    if (result.includes("dtCreatedOn is empty"))
                         seterrord("dtCreatedOn is empty")
 
-                        if (result.includes("txtAssignedto is empty"))
+                    if (result.includes("txtAssignedto is empty"))
                         seterrora("txtAssignedto is empty")
 
-                        if (result.includes("LeadEmail is empty"))
+                    if (result.includes("LeadEmail is empty"))
                         seterrorl("LeadEmail is empty")
 
-                        if (result.includes("Status is empty"))
+                    if (result.includes("Status is empty"))
                         seterrorstatus("Status is empty")
 
                 })
@@ -179,7 +179,7 @@ function Addtask({ show, setShow }) {
                                             {errorall && Subject == "" ? <label className="errors">Subject is empty</label> : ""}
                                         </div>
                                         <div className="r3_in">
-                                            
+
                                             <label>Comments</label><br></br>
                                             <input type="text" className="S" value={txtcomments} onChange={(e) => { settxtcomments(e.target.value) }} />
 
@@ -187,10 +187,10 @@ function Addtask({ show, setShow }) {
                                             {errorall && txtcomments == "" ? <label className="errorc">txtcomments is empty</label> : ""}
                                         </div>
                                         <div className="r3_in">
-                                            
+
                                             <label>created on</label><br></br>
                                             <input type="text" className="S" value={dtCreatedOn} onChange={(e) => { setdtCreatedOn(e.target.value) }} />
-                                        
+
                                             <label className="errord">{errord}</label>
                                             {errorall && dtCreatedOn == "" ? <label className="errord">dtCreatedOn is empty</label> : ""}
                                         </div>
@@ -199,21 +199,21 @@ function Addtask({ show, setShow }) {
 
                                     <div className="r4">
                                         <div className="r4_in">
-                              
+
                                             <label>Assigned to</label><br></br>
                                             <input type="text" className="S" value={txtAssignedto} onChange={(e) => { settxtAssignedto(e.target.value) }} />
                                             <label className="errora">{errora}</label>
                                             {errorall && txtAssignedto == "" ? <label className="errora">txtAssignedto is empty</label> : ""}
                                         </div>
                                         <div className="r4_in">
-                                           
+
                                             <label>Lead email id</label><br></br>
                                             <input type="text" className="S" value={LeadEmail} onChange={(e) => { setLeadEmail(e.target.value) }} />
                                             <label className="errorl">{errorl}</label>
                                             {errorall && LeadEmail == "" ? <label className="errorl">LeadEmail is empty</label> : ""}
                                         </div>
                                         <div className="r4_in">
-                                           
+
                                             <label>Status</label><br></br>
                                             <input type="text" className="S" value={Status} onChange={(e) => { setStatus(e.target.value) }} />
                                             <label className="errorstatus">{errorstatus}</label>
