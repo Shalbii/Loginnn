@@ -82,9 +82,10 @@ function Addtask({ show, setShow }) {
     const [txtAssignedto, settxtAssignedto] = useState("");
     const [Status, setStatus] = useState("");
     const [LeadEmail, setLeadEmail] = useState("");
+    const [errort, seterrort] = useState("");
 
     const loginClick = (e) => {
-        alert("added")
+        // alert("added")
         if (Subject == "" || txtcomments == "" || dtCreatedOn == "" || txtAssignedto == "" || Status == "" || LeadEmail == "") {
             seterrorall(true)
         }
@@ -95,6 +96,7 @@ function Addtask({ show, setShow }) {
             seterrorstatus("")
             seterrora("")
             seterrorl("")
+            seterrort("")
 
             // useEffect(() => {
             // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
@@ -130,6 +132,8 @@ function Addtask({ show, setShow }) {
                     if (result.includes("Status is empty"))
                         seterrorstatus("Status is empty")
 
+                    if (result.includes("Task Inserted!"))
+                         seterrort("Task Inserted!")
                 })
                 .catch((err) => {
                     console.log("error==> " + JSON.stringify(err))
@@ -140,7 +144,7 @@ function Addtask({ show, setShow }) {
     return show ? (
 
         <>
-      
+
             <div className=" A1">
                 <div className="AddtaskPage">
                     <div className="full">
@@ -165,6 +169,10 @@ function Addtask({ show, setShow }) {
                             </div>
                             <div className="whitebg">
                                 <div className="rowitems">
+
+                                <label className="errort">{errort}</label>
+                                            {/* {errorall && Subject == "" ? <label className="errort">Subject is empty</label> : ""} */}
+
                                     <div className="r2">
                                         <label>Task list details</label>
                                     </div>
@@ -227,7 +235,7 @@ function Addtask({ show, setShow }) {
                     </div>
                 </div>
             </div>
-            
+
         </>
     ) : (
         <></>

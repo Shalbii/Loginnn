@@ -667,6 +667,7 @@ module.exports.addtask = async (event) => {
           // console.log("Result = " + JSON.stringify(result))
           resolve("Task Inserted!")
           console.log("New task  details inserted")
+    
           return
         });      }
       // else {
