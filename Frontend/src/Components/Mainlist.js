@@ -10,8 +10,9 @@ import { useEffect, useState } from "react";
 export default function Mainlist() {
   const [array, setArray] = useState([]);
   useEffect(() => {
-    // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/taskfetch";
+  
     const url = "http://localhost:3000/dev/taskfetch";
+    // const url ="https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/taskfetch";
     const data = {};
     const Headers = {};
     axios

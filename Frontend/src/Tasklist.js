@@ -99,8 +99,9 @@ function Addtask({ show, setShow }) {
             seterrort("")
 
             // useEffect(() => {
-            // const url = "https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask";
+            
             const url = "http://localhost:3000/dev/addtask";
+            // const url ="https://uoqqgygwh1.execute-api.us-east-1.amazonaws.com/dev/addtask"
             const data = {
                 Subject: Subject,
                 txtcomments: txtcomments,
